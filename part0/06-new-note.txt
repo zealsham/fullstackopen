@@ -1,0 +1,11 @@
+title create note over 
+note over browser:
+user enters the text they want 
+js event handler executes when user clicks submit 
+browser add user input to list of notes 
+calls redraw that update the ui
+calls send to server
+end note 
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note_spa
+server->browser: server 201 response message created 
+note over server:

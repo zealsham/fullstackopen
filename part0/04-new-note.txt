@@ -1,0 +1,29 @@
+title creating newnote
+browser->server: HTTP POST https://studies.cs.helsinki.fi/exampleapp/new_note 
+
+note over browser:
+browser sends user input via the post request to the server 
+end note 
+note over server:
+server adds user input to the list of notes 
+end note
+server->browser: HTTP 302 /exampleapp/notes
+broser->server: HTTP GET /exampleap/notes
+server->browser: sends html 
+browser->server:  Http GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: send css file 
+browser->server:  http GET https://studies.cs.helsinki.fi/exampleapp/main.js
+server->broswer: sends js file
+
+note over browser: 
+browser executes js files 
+which in turn leads to line that calls json data 
+end note
+browser->server: http GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: responds with json data 
+
+note over browser:
+browser executes js code whic contain an event handler
+browser that  renders the notes including user entered note over 
+end note
+

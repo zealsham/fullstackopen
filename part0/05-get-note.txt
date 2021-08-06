@@ -1,0 +1,18 @@
+title spa note over 
+browser->server: http GET https://studies.cs.helsinki.fi/exampleapp/spa
+server->browser: send html document 
+browser->server: http GET https://studies.cs.helsinki.fi/exampleapp/main.css
+server->browser: sends main.css 
+browser->server: http GET https://studies.cs.helsinki.fi/exampleapp/spa.js
+server->browser: sends spa.js
+
+note over browser:
+browser start executing javascript 
+an execute js code that request json data 
+end note
+browser->server: http GET https://studies.cs.helsinki.fi/exampleapp/data.json
+server->browser: server responds with json data 
+
+note over browser:
+browser executes event handler that display notes 
+end note

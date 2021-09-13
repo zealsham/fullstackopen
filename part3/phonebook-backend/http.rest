@@ -1,0 +1,12 @@
+GET http://localhost:3001/api/persons
+###
+DELETE  http://localhost:3001/api/persons/613a7b237ce2c4faf2f43c19
+
+###
+PUT http://localhost:3001/api/persons/613a7b856280f81753c21435
+Content-Type: application/json
+
+{
+    "name":"blambiun",
+    "number":""
+}

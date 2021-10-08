@@ -1,0 +1,52 @@
+GET http://localhost:3001/api/blog
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiRHJhbWFNYW4iLCJpZCI6IjYxNWYxYmRkZDE4YmQ3OGNlYTgyOGFiZiIsImlhdCI6MTYzMzYzOTYxNn0.6-ZT0sb8ZyOnZK8dlpfJ1CQKn0e2cyTntQfI10hm_rc
+###
+PUT  http://localhost:3001/api/blog/615f2d2fed6f09d58f6132a8
+Content-Type: application/json
+
+
+{
+        "title":"wtf is happending",
+        "author":"some eeeranm person",
+        "url":"the new blog",
+        "likes":238
+}
+
+###
+POST http://localhost:3001/api/blog HTTP/1.1
+Content-Type: application/json
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiRHJhbWFNYW4iLCJpZCI6IjYxNWYxYmRkZDE4YmQ3OGNlYTgyOGFiZiIsImlhdCI6MTYzMzYyNzMzNiwiZXhwIjoxNjMzNjI3NjM2fQ.hk0FFksk9FeBdrk16jUq4bzIMkt73P_HHrGgo5W4x-8
+
+{
+        "title":"user token jwt authentication",
+        "author":"programmer",
+        "url":"logrocket.io",
+        "likes":30,
+        "user":"615f1bddd18bd78cea828abf"
+}
+
+###
+
+DELETE  http://localhost:3001/api/blog/615e2156e70f6ee481b17f6f HTTP/1.1
+Authorization: bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoidGVuaW1ha2FsYWtpIiwiaWQiOiI2MTVkODgzMjBlZmFmMTFmODExYTIxYWQiLCJpYXQiOjE2MzM2NDUwMDd9.KPEgdBSsX2ZW-1VvASoKgtvPnJbqJxgK2UmljGzhnC8
+###
+GET http://localhost:3001/api/users HTTP/1.1
+
+###
+POST http://localhost:3001/api/users HTTP/1.1
+Content-Type: application/json
+
+{
+        "name":"who mi",
+        "username":"Tenim",
+        "password":"thishouldbesecret"
+}
+
+###
+POST http://localhost:3001/api/login HTTP/1.1
+Content-Type: application/json
+
+{
+        "username":"tenimakalaki",
+        "password":"thishouldbesecret"
+}
